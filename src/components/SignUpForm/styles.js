@@ -18,7 +18,17 @@ export const StyledSubmitBtn = styled.button`
   font-weight: 500;
   padding: 16px 47px;
   font-family: inherit;
-  border: none;
+  border: 1px solid transparent;
+  justify-self: left;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover{
+    color:${({ theme }) => theme.colors.accentColor};
+    border: 1px solid ${({ theme }) => theme.colors.accentColor};
+    background-color: transparent;
+  }
+
 `;
 
 export const StyledCheckbox = styled(Field)`
@@ -35,15 +45,21 @@ export const StyledCheckboxLabel = styled.label`
     color: ${({ theme }) => theme.colors.accentColor};
     position: relative;
     text-decoration: none;
-  }
+    padding: 5px 0;
+  };
+  & a:hover::before {
+    background-color: ${({ theme }) => theme.colors.secondaryColor};
+
+  };
   & a::before{
     content: '';
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -5px;
+    bottom: 0;
     height: 1px;
     background-color: ${({ theme }) => theme.colors.accentColor};
+    transition: 0.3s;
   }
 `;
 
@@ -86,8 +102,9 @@ export const StyledCheckboxWrapper = styled.div`
     background-color: ${({ theme }) => theme.colors.accentColor};
     transition: background-color 0.3 .0.3s;
   }
-
- 
+  label:hover::before{
+    background-color: ${({ theme }) => theme.colors.accentColor};
+  }
   input[type='checkbox'] + label:after {
     opacity: 0;
     content: '';
@@ -103,7 +120,6 @@ export const StyledCheckboxWrapper = styled.div`
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
   }
-
   input[type='checkbox']:checked + label:after {
     opacity: 1;
     animation-name: ${checkboxAppear};

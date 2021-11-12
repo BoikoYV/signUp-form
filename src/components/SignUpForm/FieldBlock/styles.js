@@ -61,11 +61,11 @@ export const StyledField = styled(Field)`
   font-weight: inherit;
   color: ${({ theme }) => theme.colors.mainTextColor};
   font-size: 19px;
+  transition: 0.3s;
 
   &::placeholder{
     font-family: inherit;
     color: ${({ theme }) => theme.colors.mainTextColor};
-  
   }
 
   &:focus{
@@ -75,6 +75,9 @@ export const StyledField = styled(Field)`
     background: rgba(0, 0, 0, 0.4);
     padding-top: 22px;
     padding-bottom: 10px;
+  }
+  &:hover{
+    border-color:${({ theme }) => theme.colors.accentColor};
   }
 `;
 
