@@ -6,7 +6,7 @@ const labelShiftUp = keyframes`
     opacity: 0; 
     font-size: 19px;
     top: 22px;
-}
+  }
   100% { 
     opacity: 1; 
     font-size: 11px;
@@ -36,16 +36,18 @@ export const StyledFieldBlock = styled.div`
     left: 15px;
     top: 15px;
   }
+
   & path{
     fill: ${({ theme }) => theme.colors.accentColor};
   }
 
-  input:focus ~ label{
+  input:focus ~ label, input:required:valid ~ label{
     z-index: 1;
     color: ${({ theme }) => theme.colors.accentColor};
     animation-name: ${labelShiftUp};
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
+    
   }
 `;
 
@@ -62,19 +64,23 @@ export const StyledField = styled(Field)`
   color: ${({ theme }) => theme.colors.mainTextColor};
   font-size: 19px;
   transition: 0.3s;
-
   &::placeholder{
     font-family: inherit;
     color: ${({ theme }) => theme.colors.mainTextColor};
   }
-
-  &:focus{
+  &:focus,  &:required:valid{
     border: 1px solid;
     border-color:${({ theme }) => theme.colors.accentColor};
     outline: none;
     background: rgba(0, 0, 0, 0.4);
     padding-top: 22px;
     padding-bottom: 10px;
+  }
+  &:required:valid{
+    border: 1px solid ${({ theme }) => theme.colors.mainTextColor};
+  }
+  &:required:valid:hover{
+    border-color:${({ theme }) => theme.colors.accentColor};
   }
   &:hover{
     border-color:${({ theme }) => theme.colors.accentColor};

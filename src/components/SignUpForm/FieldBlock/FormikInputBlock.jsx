@@ -5,7 +5,7 @@ export const FormikInputBlock = ({ id, name, placeholder, type, label, icon }) =
   return (
     <StyledFieldBlock key={id}>
       {icon}
-      <StyledField key={id} name={name} placeholder={placeholder} type={type}/>
+      <StyledField key={id} name={name} placeholder={placeholder} type={type} required={true} />
       <StyledLabel htmlFor={name}>{label}</StyledLabel>
       <StyledFieldError component="p" name={name} />
     </StyledFieldBlock>)
