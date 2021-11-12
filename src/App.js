@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import {theme} from './theme';
+import { StyledWrapper } from './components/Wrapper/styles';
+import { StyledTitle } from './components/Title/styles';
+import { SignUpForm } from './components/SignUpForm/SignUpForm';
+import { StyledLogo } from './components/Logo/styles';
+import logo from './components/Logo/logo.svg'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <StyledWrapper>
+        <StyledLogo src={logo} />
+        <StyledTitle>
+          <span>Sign Up</span> and find the best place to rest while traveling
+        </StyledTitle>
+        <SignUpForm />
+      </StyledWrapper>
+    </ThemeProvider>
   );
-}
+};
+
+
 
 export default App;
