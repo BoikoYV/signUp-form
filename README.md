@@ -1,7 +1,7 @@
 ### 🔐Registration form with basic field validation and phone mask.
 #### React, Formik, Yup, react-number-format, Styled Components
 
-[Live Demo](https://online-shop-react.vercel.app/)
+[Live Demo]()
 
 ### 📕About the project
 
@@ -14,4 +14,5 @@ Sign up form with:
 - css animation;
 - dropdown custom select.
 
+![image](https://user-images.githubusercontent.com/68449997/141659923-7bd05e47-770e-4d12-a567-8d8baa08c1a0.png)
 
