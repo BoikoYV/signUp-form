@@ -1,29 +1,6 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { Field, ErrorMessage } from 'formik';
-
-const labelShiftUp = keyframes`
-  0% { 
-    opacity: 0; 
-    font-size: 19px;
-    top: 22px;
-  }
-  100% { 
-    opacity: 1; 
-    font-size: 11px;
-    top: 10px;
-  }`;
-
-const labelShiftDown = keyframes`
- 0% { 
-    opacity: 1; 
-    top: 15px;
-    font-size: 11px;
-  }
-  100% { 
-    opacity: 0; 
-    font-size: 19px;
-    top: 22px;
-}`;
+import {labelShiftUp, labelShiftDown} from '../../../animation';
 
 export const StyledFieldBlock = styled.div`
   position: relative;
@@ -41,14 +18,15 @@ export const StyledFieldBlock = styled.div`
     fill: ${({ theme }) => theme.colors.accentColor};
   }
 
-  input:focus ~ label, input:required:valid ~ label{
+  input:focus ~ label, input:required:valid ~ label,
+  select:focus ~ label, select:required:valid ~ label{
     z-index: 1;
     color: ${({ theme }) => theme.colors.accentColor};
     animation-name: ${labelShiftUp};
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
-    
   }
+  
 `;
 
 export const StyledField = styled(Field)`

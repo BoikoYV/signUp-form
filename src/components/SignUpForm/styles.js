@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import { Form, Field } from 'formik';
 import checkedIcon from './checkedIcon.svg';
+
 export const StyledForm = styled(Form)`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -83,7 +84,6 @@ const checkboxDisappear = keyframes`
     transform:scale(0.7);
 }`;
 
-
 export const StyledCheckboxWrapper = styled.div`
   position: relative;
  
@@ -127,3 +127,4 @@ export const StyledCheckboxWrapper = styled.div`
     animation-fill-mode: forwards;
 }
 `;
+

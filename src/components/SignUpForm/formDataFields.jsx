@@ -33,6 +33,7 @@ export const formDataFields = [
     icon: <CountryIcon />
   },
   {
+    isPhone: true,
     id: 4,
     name: 'phone',
     label: 'Phone',
