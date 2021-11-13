@@ -17,11 +17,11 @@ export const StyledSignInLink = styled.p`
   text-align: center;
   margin-bottom: 15px;
   margin-top: 15px;
+  
   & a{
     position: relative;
     color: ${({ theme }) => theme.colors.accentColor};
     text-decoration: none;
-  
   };
 
   & a::before{
@@ -31,5 +31,9 @@ export const StyledSignInLink = styled.p`
     width: 100%;
     height: 1px;
     background-color:${({ theme }) => theme.colors.accentColor};
+    transition: 0.3s;
   }
+  & a:hover::before {
+    background-color: ${({ theme }) => theme.colors.secondaryColor};
+  };
 `;

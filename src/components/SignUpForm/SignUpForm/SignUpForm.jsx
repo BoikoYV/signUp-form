@@ -7,6 +7,7 @@ import { StyledForm, StyledSubmitBtn, StyledCheckbox, StyledCheckboxLabel, Style
 import { CountryFieldBlock } from '../CountryFieldBlock/CountryField';
 import { NumberFormatInputBlock } from '../NumberFieldBlock/NumberFormatInputBlock';
 import { countriesList } from '../countriesList';
+import { StyledFieldError } from '../FieldBlock/styles';
 
 export const SignUpForm = () => {
   const [values, setvalues] = useState(null);
@@ -17,6 +18,7 @@ export const SignUpForm = () => {
   }
 
   const handleFormSubmit = (values) => {
+    console.log('submit', values);
     setvalues(values);
   }
 
@@ -81,6 +83,7 @@ export const SignUpForm = () => {
             <StyledCheckboxLabel htmlFor="termsCheckbox">
               I agree to the <a href="#!">Terms & Conditions</a>
             </StyledCheckboxLabel>
+            <StyledFieldError component="p" name='termsCheckbox' />
           </StyledCheckboxWrapper>
           <StyledSubmitBtn disabled={isSubmitting} type="submit">Sign Up</StyledSubmitBtn>
         </StyledForm>

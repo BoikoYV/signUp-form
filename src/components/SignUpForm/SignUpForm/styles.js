@@ -59,7 +59,6 @@ export const StyledCheckboxLabel = styled.label`
   };
   & a:hover::before {
     background-color: ${({ theme }) => theme.colors.secondaryColor};
-
   };
   & a::before{
     content: '';
