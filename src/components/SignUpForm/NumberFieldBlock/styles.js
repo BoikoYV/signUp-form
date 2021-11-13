@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { labelShiftUp } from '../../../styles/animation';
 import { StyledField } from '../FieldBlock/styles';
+import { labelShiftUp } from '../../../styles/animation';
 
-export const StyledCountryFieldBlock = styled.div`
+export const StyledNumberFieldBlock = styled.div`
   position: relative;
   width: 100%;
 
@@ -31,7 +31,5 @@ export const StyledCountryFieldBlock = styled.div`
   }
 `;
 
-export const StyledCountryField = styled(StyledField)`
-  color: transparent;
-  text-shadow: 0 0 0 ${({ theme }) => theme.colors.mainTextColor};
-`;
+//  const StyledNumberFieldEl = styled(NumberFormat)``;
+ export const StyledNumberField = styled(StyledField)``;

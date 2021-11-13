@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Field, ErrorMessage } from 'formik';
-import {labelShiftUp, labelShiftDown} from '../../../animation';
+import { labelShiftUp, labelShiftDown } from '../../../styles/animation';
 
 export const StyledFieldBlock = styled.div`
   position: relative;
@@ -18,15 +18,13 @@ export const StyledFieldBlock = styled.div`
     fill: ${({ theme }) => theme.colors.accentColor};
   }
 
-  input:focus ~ label, input:required:valid ~ label,
-  select:focus ~ label, select:required:valid ~ label{
+  input:focus ~ label, input:required:valid ~ label{
     z-index: 1;
     color: ${({ theme }) => theme.colors.accentColor};
     animation-name: ${labelShiftUp};
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
   }
-  
 `;
 
 export const StyledField = styled(Field)`
@@ -41,7 +39,7 @@ export const StyledField = styled(Field)`
   font-weight: inherit;
   color: ${({ theme }) => theme.colors.mainTextColor};
   font-size: 19px;
-  transition: 0.3s;
+  transition: border-color 0.3s;
   &::placeholder{
     font-family: inherit;
     color: ${({ theme }) => theme.colors.mainTextColor};
@@ -51,8 +49,8 @@ export const StyledField = styled(Field)`
     border-color:${({ theme }) => theme.colors.accentColor};
     outline: none;
     background: rgba(0, 0, 0, 0.4);
-    padding-top: 22px;
-    padding-bottom: 10px;
+    padding-top: 21px;
+    padding-bottom: 11px;
   }
   &:required:valid{
     border: 1px solid ${({ theme }) => theme.colors.mainTextColor};

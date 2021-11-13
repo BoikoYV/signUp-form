@@ -15,7 +15,7 @@ export const labelShiftUp = keyframes`
 export const labelShiftDown = keyframes`
  0% { 
     opacity: 1; 
-    top: 15px;
+    top: 10px;
     font-size: 11px;
   }
   100% { 

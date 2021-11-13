@@ -1,10 +1,10 @@
-import FisrstNameIcon from './icons/FisrstNameIcon';
-import SecondNameIcon from './icons/SecondNameIcon';
-import CountryIcon from './icons/CountryIcon';
-import PhoneIcon from './icons/PhoneIcon';
-import PasswordIcon from './icons/PasswordIcon';
-import ConfirmPasswordIcon from './icons/ConfirmPasswordIcon';
-import EmailIcon from './icons/EmailIcon';
+import FisrstNameIcon from '../icons/FisrstNameIcon';
+import SecondNameIcon from '../icons/SecondNameIcon';
+import CountryIcon from '../icons/CountryIcon';
+import PhoneIcon from '../icons/PhoneIcon';
+import PasswordIcon from '../icons/PasswordIcon';
+import ConfirmPasswordIcon from '../icons/ConfirmPasswordIcon';
+import EmailIcon from '../icons/EmailIcon';
 
 export const formDataFields = [
   {

@@ -1,6 +1,15 @@
 import styled from 'styled-components';
 
 export const StyledWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  
+`;
+
+export const StyledCenteredContainer = styled.div`
   position:relative;
   width: 100vw;
   height: 100vh;
@@ -8,7 +17,6 @@ export const StyledWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   &::before{
     content: '';
     position: absolute;

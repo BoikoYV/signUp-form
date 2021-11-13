@@ -1,8 +1,8 @@
 import { createGlobalStyle } from "styled-components";
-import RubikLighWoff from "./fonts/Rubik-Light.woff";
-import RubikLighWoff2 from "./fonts/Rubik-Light.woff2";
-import RubikMediumWoff from "./fonts/Rubik-Medium.woff";
-import RubikMediumWof2 from "./fonts/Rubik-Medium.woff2";
+import RubikLighWoff from "../fonts/Rubik-Light.woff";
+import RubikLighWoff2 from "../fonts/Rubik-Light.woff2";
+import RubikMediumWoff from "../fonts/Rubik-Medium.woff";
+import RubikMediumWof2 from "../fonts/Rubik-Medium.woff2";
 
 export const GlobalStyles = createGlobalStyle`
 

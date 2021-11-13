@@ -1,26 +1,28 @@
 import React, { useState } from 'react';
 import { Formik, FieldArray } from 'formik';
 import { formDataFields } from './formDataFields';
-import { BasicFormSchema } from './BasicFormSchema';
-import { FormikInputBlock } from './FieldBlock/FormikInputBlock';
+import { BasicFormSchema } from '../BasicFormSchema';
+import { FormikInputBlock } from '../FieldBlock/FormikInputBlock';
 import { StyledForm, StyledSubmitBtn, StyledCheckbox, StyledCheckboxLabel, StyledCheckboxWrapper } from './styles';
-import { CountryFieldBlock } from './CountryFieldBlock/CountryField';
-
+import { CountryFieldBlock } from '../CountryFieldBlock/CountryField';
+import { NumberFormatInputBlock } from '../NumberFieldBlock/NumberFormatInputBlock';
+import { countriesList } from '../countriesList';
 
 export const SignUpForm = () => {
-  const [setvalues] = useState(null);
+  const [values, setvalues] = useState(null);
   const [currentCountry, setCurrentCountry] = useState('');
 
   const setCountryHandler = (value) => {
-    // console.log(value);
-    // setCurrentCountry(value);
-    // console.log(value);
-
+    setCurrentCountry(value);
   }
 
   const handleFormSubmit = (values) => {
     setvalues(values);
-    console.log(values);
+  }
+
+  let currentNumberFormat;
+  if (currentCountry) {
+    currentNumberFormat = countriesList.find(item => item.name === currentCountry).dial_code;
   }
 
   return (
@@ -38,8 +40,8 @@ export const SignUpForm = () => {
       validationSchema={BasicFormSchema}
       onSubmit={handleFormSubmit}>
 
-      {({ isSubmitting, values, handleChange }) => (
-        <StyledForm >
+      {({ isSubmitting }) => (
+        <StyledForm>
           <FieldArray name="fields"
             render={() => (
               <>
@@ -54,7 +56,13 @@ export const SignUpForm = () => {
                       countryValue={currentCountry}
                       setCountryHandler={setCountryHandler} />)
                   } else if (isPhone) {
-                    return;
+                    return (<NumberFormatInputBlock key={id}
+                      name={name}
+                      type={type}
+                      label={label}
+                      placeholder={placeholder}
+                      icon={icon}
+                      numberFormat={currentNumberFormat} />)
                   } else {
                     return (<FormikInputBlock key={id}
                       name={name}

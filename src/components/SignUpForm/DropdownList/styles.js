@@ -7,6 +7,7 @@ export const StyledCountryList = styled.ul`
   display: none;
   transition: 0.3s;
   position: absolute;
+  bottom: -162px;
   color: #5e5e5e;
   z-index: 5;
   background-color: ${({ theme }) => theme.colors.secondaryColor};
