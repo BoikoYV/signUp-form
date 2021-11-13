@@ -18,8 +18,8 @@ export const SignUpForm = () => {
   }
 
   const handleFormSubmit = (values) => {
-    console.log('submit', values);
     setvalues(values);
+    alert('Successfully submitted')
   }
 
   let currentNumberFormat;
