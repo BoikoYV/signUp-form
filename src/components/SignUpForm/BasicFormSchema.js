@@ -15,7 +15,10 @@ export const BasicFormSchema = Yup.object().shape({
     .email('Invalid email address')
     .required('Required field'),
   phone: Yup.string()
+    .min(6, 'To short number')
     .required('Required field'),
-  country: Yup.string()
+  password: Yup.string()
+    .required('Required field'),
+  confirmPassword: Yup.string()
     .required('Required field'),
 });

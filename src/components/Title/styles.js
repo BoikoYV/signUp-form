@@ -15,7 +15,8 @@ export const StyledTitle = styled.h2`
 export const StyledSignInLink = styled.p`
   color:#fff;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  margin-top: 15px;
   & a{
     position: relative;
     color: ${({ theme }) => theme.colors.accentColor};

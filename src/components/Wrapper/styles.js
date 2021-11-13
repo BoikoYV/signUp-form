@@ -12,11 +12,12 @@ export const StyledWrapper = styled.div`
 export const StyledCenteredContainer = styled.div`
   position:relative;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 15px;
   &::before{
     content: '';
     position: absolute;

@@ -9,6 +9,12 @@ export const StyledForm = styled(Form)`
   justify-content: space-between;
   grid-gap: 30px;
   align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    /* justify-content: center; */
+  }
 `;
 
 export const StyledSubmitBtn = styled.button`
@@ -28,6 +34,9 @@ export const StyledSubmitBtn = styled.button`
     color:${({ theme }) => theme.colors.accentColor};
     border: 1px solid ${({ theme }) => theme.colors.accentColor};
     background-color: transparent;
+  }
+  @media (max-width: 768px) {
+    justify-self: stretch;
   }
 
 `;
