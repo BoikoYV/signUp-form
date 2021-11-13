@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import { StyledLabel, StyledFieldError } from '../FieldBlock/styles';
 import { StyledNumberFieldBlock, StyledNumberField } from './styles';
 
-export const NumberFormatInputBlock = ({ id, name, placeholder, type, label, icon, numberFormat = '' }) => {
-  
+export const NumberFormatInputBlock = ({ id, name, placeholder, type, label, icon, numberFormat, countryValue }) => {
+
   const [field] = useField(name);
   return <StyledNumberFieldBlock key={id}>
     {icon}
@@ -15,6 +15,7 @@ export const NumberFormatInputBlock = ({ id, name, placeholder, type, label, ico
       id={id}
       as={NumberFormat}
       format={`${numberFormat} ###########`}
+      allowEmptyFormatting={countryValue ? true : false}
       name={name}
       placeholder={placeholder}
       type={type}
@@ -31,12 +32,16 @@ NumberFormatInputBlock.propTypes = {
   placeholder: PropTypes.string,
   type: PropTypes.string,
   label: PropTypes.string.isRequired,
-  icon: PropTypes.node
+  icon: PropTypes.node,
+  countryValue: PropTypes.string,
+  numberFormat: PropTypes.string
 }
 
 NumberFormatInputBlock.defaultProps = {
   placeholder: '',
   type: 'text',
   id: '',
-  icon: ''
+  icon: '',
+  countryValue: '',
+  numberFormat: ''
 }

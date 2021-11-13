@@ -62,6 +62,7 @@ export const SignUpForm = () => {
                       label={label}
                       placeholder={placeholder}
                       icon={icon}
+                      countryValue={currentCountry}
                       numberFormat={currentNumberFormat} />)
                   } else {
                     return (<FormikInputBlock key={id}
